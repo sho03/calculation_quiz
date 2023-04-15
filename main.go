@@ -37,6 +37,11 @@ func main() {
 	case "*":
 		answer = left * right
 	case "/":
+		if left < right {
+			temp := left
+			left = right
+			right = temp
+		}
 		answer = left / right
 	}
 
